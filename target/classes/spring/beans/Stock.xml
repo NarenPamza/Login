@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+
+	<!-- Stock business object -->
+   <bean id="LoginService" class="com.naren.stock.bo.impl.LoginServiceImpl" >
+   </bean>
+   
+   <bean id="loginDao" class="com.naren.stock.dao.impl.LoginDaoImpl">
+   <property name="sessionFactory" ref="sessionFactory"></property>
+   </bean> 
+   
+   <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean"/>
+</beans>
